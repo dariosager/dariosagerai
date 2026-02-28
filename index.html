@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dario — AI Project Manager & Consulting</title>
+  <meta name="description" content="AI Project Manager & Consulting Services. Projektleitung, Delivery, Stakeholder-Management, AI/Automation Rollouts." />
+  <style>
+    :root{
+      --bg:#0b0f1a;
+      --card:#0f1629;
+      --card2:#0c1324;
+      --text:#e9eefc;
+      --muted:#b9c3de;
+      --line:rgba(255,255,255,.10);
+      --accent:#7aa2ff;
+      --accent2:#9b7aff;
+      --shadow:0 12px 40px rgba(0,0,0,.35);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,"Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:
+        radial-gradient(900px 500px at 12% -10%, rgba(122,162,255,.25), transparent 60%),
+        radial-gradient(900px 500px at 95% 10%, rgba(155,122,255,.22), transparent 55%),
+        radial-gradient(900px 600px at 50% 120%, rgba(122,255,209,.08), transparent 55%),
+        var(--bg);
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1040px;margin:0 auto;padding:28px 18px 64px}
+    .topbar{
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      position:sticky;top:0;backdrop-filter:saturate(1.2) blur(10px);
+      padding:12px 0;z-index:3;
+    }
+    .brand{
+      display:flex;align-items:center;gap:10px;font-weight:650;letter-spacing:.2px
+    }
+    .dot{
+      width:12px;height:12px;border-radius:999px;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      box-shadow:0 0 0 4px rgba(122,162,255,.12);
+    }
+    .nav{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end}
+    .nav a{
+      font-size:14px;color:var(--muted);
+      padding:8px 10px;border-radius:999px;border:1px solid transparent;
+    }
+    .nav a:hover{border-color:var(--line);color:var(--text);background:rgba(255,255,255,.03)}
+    .hero{
+      margin-top:18px;
+      display:grid;grid-template-columns:1.2fr .8fr;gap:16px;
+      align-items:stretch;
+    }
+    @media (max-width: 860px){ .hero{grid-template-columns:1fr} .topbar{position:static} }
+    .panel{
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:22px;
+    }
+    .h-eyebrow{color:var(--muted);font-size:13px;letter-spacing:.18em;text-transform:uppercase;margin:0 0 10px}
+    h1{margin:0 0 10px;font-size:34px;line-height:1.15}
+    .subtitle{margin:0 0 16px;color:var(--muted);font-size:15px;line-height:1.5}
+    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:10px 12px;border-radius:12px;border:1px solid var(--line);
+      background:rgba(255,255,255,.03);color:var(--text);font-size:14px;
+    }
+    .btn.primary{
+      border-color:rgba(122,162,255,.35);
+      background:linear-gradient(135deg, rgba(122,162,255,.22), rgba(155,122,255,.18));
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .grid{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px
+    }
+    @media (max-width: 860px){ .grid{grid-template-columns:1fr} }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.015));
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:16px;
+      min-height:132px;
+    }
+    .card h3{margin:0 0 8px;font-size:16px}
+    .card p{margin:0;color:var(--muted);font-size:14px;line-height:1.45}
+    .section{margin-top:18px}
+    .section h2{margin:0 0 10px;font-size:18px}
+    .list{margin:0;padding-left:18px;color:var(--muted);line-height:1.6;font-size:14px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .chip{
+      display:inline-flex;align-items:center;
+      padding:7px 10px;border-radius:999px;border:1px solid var(--line);
+      background:rgba(255,255,255,.02);
+      color:var(--muted);font-size:13px
+    }
+    .two{
+      display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px
+    }
+    @media (max-width: 860px){ .two{grid-template-columns:1fr} }
+    .footer{
+      margin-top:20px;color:var(--muted);font-size:13px;
+      display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;
+      border-top:1px solid var(--line);padding-top:14px
+    }
+    .small{font-size:13px;color:var(--muted);line-height:1.5;margin:0}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Dario <span style="color:var(--muted)"></span></span>
+      </div>
+      <div class="nav">
+        <a href="#services">Services</a>
+        <a href="#partners">Partner</a>
+        <a href="#process">Arbeitsweise</a>
+        <a href="#contact">Kontakt</a>
+        <a href="#legal">Rechtliches</a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="panel">
+        <p class="h-eyebrow">AI Project Manager • Consulting</p>
+        <h1>AI Project Management & Consulting Services</h1>
+        <p class="subtitle">
+          Ich unterstütze Teams bei der Planung, Umsetzung und dem erfolgreichen Go-Live von AI-/Automation-Projekten:
+          klare Scope-Definition, saubere Delivery, Stakeholder-Alignment und messbare Outcomes.
+        </p>
+
+        <div class="cta">
+          <a class="btn primary" href="#contact">Kontakt aufnehmen</a>
+          <a class="btn" href="[DEIN_LINKEDIN_URL]" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn" href="mailto:[DEINE_EMAIL]">E-Mail</a>
+        </div>
+
+        <div class="section" style="margin-top:18px">
+          <h2>Fokus</h2>
+          <div class="chips">
+            <span class="chip">AI Delivery & Rollout</span>
+            <span class="chip">Product/Project Alignment</span>
+            <span class="chip">Stakeholder Management</span>
+            <span class="chip">Roadmaps & Milestones</span>
+            <span class="chip">Vendors & Teams</span>
+            <span class="chip">Risk & Quality</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel" style="background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));">
+        <div class="section" style="margin-top:0">
+          <h2>Profil</h2>
+          <p class="small">
+            Standort: Portugal • Remote / On-site (nach Absprache)<br/>
+            Abrechnung: Stunde oder Paket • Rechnungen/Quittungen auf Anfrage
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>Wofür Kunden mich buchen</h2>
+          <ul class="list">
+            <li>Projektleitung von AI-Initiativen (Discovery → MVP → Production)</li>
+            <li>Koordination zwischen Business, Tech, Data, Vendoren</li>
+            <li>Scope, Timeline, Risiken, Abhängigkeiten, Priorisierung</li>
+            <li>Go-Live Readiness, Monitoring, Iterationen</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>Statement Descriptor (Stripe)</h2>
+          <p class="small">
+            Empfohlen: <span class="mono">DARIO AI CONSULTING</span> (max. 22 Zeichen).
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="services" class="grid">
+      <div class="card">
+        <h3>AI Project Management</h3>
+        <p>End-to-end Delivery: Planung, Milestones, Budget/Time, Team-Koordination, Risiko-Management, Reporting.</p>
+      </div>
+      <div class="card">
+        <h3>AI Consulting</h3>
+        <p>Use-Case-Definition, ROI-Bewertung, Prozessdesign, Tool/Vendor-Auswahl, Operating Model & Governance.</p>
+      </div>
+      <div class="card">
+        <h3>Implementation Support</h3>
+        <p>Requirements, Backlog/PRD, QA/Abnahmen, UAT, Rollout-Plan, Enablement/Training, Post-Launch Iteration.</p>
+      </div>
+    </div>
+
+    <div class="two">
+      <div class="panel" id="partners">
+        <h2>Partner / Projekte (PM-Rolle)</h2>
+        <p class="small">Auswahl von Partnern, bei denen ich als Project Manager gearbeitet habe:</p>
+        <div class="chips">
+          <span class="chip">besimple</span>
+          <span class="chip">outlir</span>
+          <span class="chip">YGO</span>
+          <span class="chip">Timelab Media</span>
+        </div>
+        <p class="small" style="margin-top:10px">
+          Auf Anfrage: kurze Case-Summaries (Problem → Ansatz → Ergebnis) und Referenzen, sofern möglich.
+        </p>
+      </div>
+
+      <div class="panel" id="process">
+        <h2>Arbeitsweise</h2>
+        <ul class="list">
+          <li><strong>Kickoff:</strong> Ziele, Stakeholder, Success Metrics, Scope & Constraints</li>
+          <li><strong>Plan:</strong> Roadmap, Milestones, Ownership, Kommunikationsrhythmus</li>
+          <li><strong>Delivery:</strong> Weekly Updates, Blocker-Removal, Quality Gates</li>
+          <li><strong>Go-Live:</strong> Readiness-Check, Rollout, Monitoring, Next Iteration Plan</li>
+        </ul>
+        <div class="section">
+          <h2>Tools (optional)</h2>
+          <div class="chips">
+            <span class="chip">Jira / Linear</span>
+            <span class="chip">Notion / Confluence</span>
+            <span class="chip">Slack</span>
+            <span class="chip">Google Workspace</span>
+            <span class="chip">Figma</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="two">
+      <div class="panel" id="contact">
+        <h2>Kontakt</h2>
+        <p class="small">
+          E-Mail: <a class="mono" href="mailto:dario@besimple.ai">dario@besimple.ai</a><br/>
+          LinkedIn: <a class="mono" href="https://www.linkedin.com/in/dario-sager-4a4a012ba/" target="_blank" rel="noreferrer">https://www.linkedin.com/in/dario-sager-4a4a012ba/</a>
+        </p>
+        <p class="small" style="margin-top:10px">
+          Schreib mir kurz: Ziel, Deadline, Umfang (grobe Stunden/Teamgröße) und ob es um AI-Rollout, Automation oder Projekt-Rescue geht.
+        </p>
+      </div>
+
+      <div class="panel" id="legal">
+        <h2>Rechtliches</h2>
+        <p class="small">
+          Anbieter: Dario Sager (Selbstständig / Einzelunternehmer)<br/>
+          Land: Portugal<br/>
+          Kontakt: <a class="mono" href="mailto:dario@besimple.ai">dario@besimple.ai</a><br/>
+          Rückerstattungen: fallweise nach Prüfung (case-by-case), abhängig von erbrachter Leistung.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>© <span id="y"></span> Dario Sager </div>
+      <div class="mono">Last updated: <span id="d"></span></div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    const dt = new Date();
+    const pad = n => String(n).padStart(2,"0");
+    document.getElementById("d").textContent = `${dt.getFullYear()}-${pad(dt.getMonth()+1)}-${pad(dt.getDate())}`;
+  </script>
+</body>
+</html>
